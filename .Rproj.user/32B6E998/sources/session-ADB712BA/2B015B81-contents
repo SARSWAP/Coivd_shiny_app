@@ -1,0 +1,17 @@
+m <- data(CO2)
+m
+rm(x)
+rm(z)
+plot(co2,main = "Atmospheric co2 conc")
+co2.lm = lm(co2~time(co2))
+abline(co2.lm)
+co2.res = resid(co2.lm)
+hist(co2.res)
+line(dist(co2.res))
+qqnorm(co2.res)
+
+qqline(co2.res)
+plot(co2.res~time(co2),xlim = c(1960,1963),main ="plot")
+
+
+?sleep
